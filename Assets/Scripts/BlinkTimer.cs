@@ -69,7 +69,8 @@ public class BlinkTimer: MonoBehaviour
         topLid.transform.position = new Vector3(0, yPosStart, 0);
         botLid.transform.position = new Vector3(0, -yPosStart, 0);
 
-        if (SceneManager.GetActiveScene().name == "GameOverScene")
+        // Start in a "closed-eyes" position at the beginning of the game over scene
+        if (SceneManager.GetActiveScene().name.Equals("GameOverScene"))
         {
             monster1.transform.position = banishment;
             monster2.transform.position = banishment;
@@ -78,6 +79,19 @@ public class BlinkTimer: MonoBehaviour
             topLid.transform.position = new Vector3(0, yPosEnd, 0);
             botLid.transform.position = new Vector3(0, -yPosEnd, 0);
             BlinkLogic(false, 2);
+        }
+
+        // Don't blink during the intro scene
+        if(SceneManager.GetActiveScene().name.Equals("IntroScene"))
+        {
+            monster1.transform.position = banishment;
+            monster2.transform.position = banishment;
+            monster3.transform.position = banishment;
+            //monster4.transform.position = banishment;
+            topLid.transform.position = new Vector3(0, yPosStart, 0);
+            botLid.transform.position = new Vector3(0, -yPosStart, 0);
+            ToggleBlinkMechanics(false);
+            BlinkLogic(false);
         }
     }
 
@@ -160,9 +174,21 @@ public class BlinkTimer: MonoBehaviour
         return love;
     }
 
+    public void SetLove(int l)
+    {
+        love = l;
+        PlayerPrefs.SetInt("love", love);
+        PlayerPrefs.Save();
+    }
+
     public void UpdateLove(int val)
     {
         love += val;
+
+        // Make the love value persistent across scenes
+        PlayerPrefs.SetInt("love", love);
+        PlayerPrefs.Save();
+
         heart.ShowHeart(val);
     }
 

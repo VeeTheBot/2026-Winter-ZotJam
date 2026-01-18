@@ -195,4 +195,8 @@ public class PlayDialogue : MonoBehaviour
         // Move to the next choice dialogue
         choiceDialogueIndex++;
     }
+
+
+
+    public int GetIndex() { return index; }
 }

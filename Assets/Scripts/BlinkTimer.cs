@@ -82,7 +82,7 @@ public class BlinkTimer: MonoBehaviour
         }
 
         // Don't blink during the intro scene
-        if(SceneManager.GetActiveScene().name.Equals("IntroScene"))
+        if(SceneManager.GetActiveScene().name.Equals("IntroScene") || SceneManager.GetActiveScene().name.Equals("TextScene"))
         {
             monster1.transform.position = banishment;
             monster2.transform.position = banishment;

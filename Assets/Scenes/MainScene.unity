@@ -195,7 +195,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.size
-      value: 51
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[0].name
@@ -830,23 +830,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].text
-      value: I want to go skiing! That sounds like so much fun!
+      value: "I don\u2019t know, I guess I haven\u2019t found a good enough reason
+        to head up there yet."
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].time
-      value: 4
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].name
-      value: Sydney
+      value: Ending
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].text
-      value: I want to go skiing! That sounds like so much fun!
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].time
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[0].sprite
@@ -1055,11 +1056,11 @@ PrefabInstance:
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].sprite
       value: 
-      objectReference: {fileID: -3039559592135430102, guid: 187ab596f3a35724681a4757097c9d57, type: 3}
+      objectReference: {fileID: -8333091937584048074, guid: 5cc0a2326c4e4024fa46b01a2dddaffb, type: 3}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].sprite
       value: 
-      objectReference: {fileID: -3039559592135430102, guid: 187ab596f3a35724681a4757097c9d57, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[17].choices.Array.size
       value: 4
@@ -1086,7 +1087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[17].choices.Array.data[0].love
@@ -1170,7 +1171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[3].love
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[0].love
@@ -1186,7 +1187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[3].love
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[17].choices.Array.data[0].option
@@ -1258,7 +1259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[2].option
-      value: Why don't I take you?
+      value: "Why don\u2019t I take you?"
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[0].option
@@ -1270,7 +1271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[2].option
-      value: Why don't I take you?
+      value: "Why don\u2019t I take you?"
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[17].choices.Array.data[0].dialogueList.Array.size
@@ -1877,7 +1878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[0].dialogueList.Array.data[0].time
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[0].dialogueList.Array.data[1].name
@@ -1889,7 +1890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[0].dialogueList.Array.data[1].time
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[0].dialogueList.Array.data[2].name
@@ -1901,7 +1902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[0].dialogueList.Array.data[2].time
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[1].dialogueList.Array.data[0].name
@@ -1913,7 +1914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[1].dialogueList.Array.data[0].time
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[1].dialogueList.Array.data[1].name
@@ -1925,7 +1926,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[1].dialogueList.Array.data[1].time
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[1].dialogueList.Array.data[2].name
@@ -1969,7 +1970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[3].dialogueList.Array.data[0].text
-      value: "Aaand I guess you aren\u2019t going to say anything."
+      value: "... Aaand I guess you aren\u2019t going to say anything."
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[3].dialogueList.Array.data[0].time
@@ -1985,7 +1986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[0].dialogueList.Array.data[0].time
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[0].dialogueList.Array.data[1].name
@@ -1997,7 +1998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[0].dialogueList.Array.data[1].time
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[0].dialogueList.Array.data[2].name
@@ -2009,7 +2010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[0].dialogueList.Array.data[2].time
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[1].dialogueList.Array.data[0].name
@@ -2021,7 +2022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[1].dialogueList.Array.data[0].time
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[1].dialogueList.Array.data[1].name
@@ -2033,7 +2034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[1].dialogueList.Array.data[1].time
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[1].dialogueList.Array.data[2].name
@@ -2077,7 +2078,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[3].dialogueList.Array.data[0].text
-      value: "Aaand I guess you aren\u2019t going to say anything."
+      value: "... Aaand I guess you aren\u2019t going to say anything."
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[3].dialogueList.Array.data[0].time
@@ -2270,11 +2271,11 @@ PrefabInstance:
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[2].dialogueList.Array.data[0].sprite
       value: 
-      objectReference: {fileID: 2223958674848703615, guid: 0855976428197d14ba0e7a616a6a3187, type: 3}
+      objectReference: {fileID: -3039559592135430102, guid: 187ab596f3a35724681a4757097c9d57, type: 3}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[2].dialogueList.Array.data[1].sprite
       value: 
-      objectReference: {fileID: -1165319112259658979, guid: c71c54a9534808e4f82256a61c5937ff, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[51].choices.Array.data[3].dialogueList.Array.data[0].sprite
       value: 
@@ -2306,11 +2307,11 @@ PrefabInstance:
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[2].dialogueList.Array.data[0].sprite
       value: 
-      objectReference: {fileID: 2223958674848703615, guid: 0855976428197d14ba0e7a616a6a3187, type: 3}
+      objectReference: {fileID: -3039559592135430102, guid: 187ab596f3a35724681a4757097c9d57, type: 3}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[2].dialogueList.Array.data[1].sprite
       value: 
-      objectReference: {fileID: -1165319112259658979, guid: c71c54a9534808e4f82256a61c5937ff, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[52].choices.Array.data[3].dialogueList.Array.data[0].sprite
       value: 
@@ -2373,7 +2374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3178799892402006300, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 83.027306
+      value: 82.99035
       objectReference: {fileID: 0}
     - target: {fileID: 3178799892402006300, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2381,7 +2382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3178799892402006300, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -147.52461
+      value: -147.4507
       objectReference: {fileID: 0}
     - target: {fileID: 3571894749871006314, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2641,7 +2642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6773863914286792739, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -32.248653
+      value: -32.230175
       objectReference: {fileID: 0}
     - target: {fileID: 7032739891452462364, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: m_AnchorMax.x

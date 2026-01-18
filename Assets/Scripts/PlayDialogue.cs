@@ -115,6 +115,42 @@ public class PlayDialogue : MonoBehaviour
                 SceneManager.LoadScene(list.GetDialogueList()[index].text);
             }
 
+            // Run the ending injector if properly set up
+            if(list.GetDialogueList()[index].name.ToLower().Equals("ending"))
+            {
+                int love = loveUpdate.GetLove();
+
+                // Secret ending
+                if(love <= 1 && PlayerPrefs.GetInt("goodEnding") == 1 && PlayerPrefs.GetInt("neutralEnding") == 1 && PlayerPrefs.GetInt("badEnding") == 1)
+                {
+                    PlayerPrefs.SetInt("secretEnding", 1);
+                    PlayerPrefs.Save();
+                    SceneManager.LoadScene("EndingSceneSecret");
+                }
+
+                // Good ending
+                else if(love >= 5)
+                {
+                    PlayerPrefs.SetInt("goodEnding", 1);
+                    PlayerPrefs.Save();
+                    SceneManager.LoadScene("EndingSceneGood");
+                }
+                // Neutral ending
+                else if(love >= 2)
+                {
+                    PlayerPrefs.SetInt("neutralEnding", 1);
+                    PlayerPrefs.Save();
+                    SceneManager.LoadScene("EndingSceneNeutral");
+                }
+                // Bad ending
+                else
+                {
+                    PlayerPrefs.SetInt("badEnding", 1);
+                    PlayerPrefs.Save();
+                    SceneManager.LoadScene("EndingSceneBad");
+                }
+            }
+
             // Update the name and dialogue
             name.text = list.GetDialogueList()[index].name;
             text.text = list.GetDialogueList()[index].text;
@@ -169,6 +205,54 @@ public class PlayDialogue : MonoBehaviour
 
     void PreloadChoiceDialogue()
     {
+        // Run the scene inject if properly set up
+        if(list.GetDialogueList()[index].choices[choiceIndex].dialogueList[choiceDialogueIndex].name.ToLower().Equals("scene"))
+        {
+            SceneManager.LoadScene(list.GetDialogueList()[index].text);
+        }
+
+        // Run the ending injector if properly set up
+        if(list.GetDialogueList()[index].choices[choiceIndex].dialogueList[choiceDialogueIndex].name.ToLower().Equals("ending"))
+        {
+            int love = loveUpdate.GetLove();
+
+            // Good ending
+            if(love >= 5)
+            {
+                PlayerPrefs.SetInt("goodEnding", 1);
+                PlayerPrefs.Save();
+                SceneManager.LoadScene("EndingSceneGood");
+            }
+            // Neutral ending
+            else if(love >= 2)
+            {
+                PlayerPrefs.SetInt("neutralEnding", 1);
+                PlayerPrefs.Save();
+                SceneManager.LoadScene("EndingSceneNeutral");
+            }
+            
+            else
+            {
+                // Bad ending
+                if(!(PlayerPrefs.GetInt("goodEnding") == 1 &&
+                     PlayerPrefs.GetInt("neutralEnding") == 1 &&
+                     PlayerPrefs.GetInt("badEnding") == 1))
+                {
+                    PlayerPrefs.SetInt("badEnding", 1);
+                    PlayerPrefs.Save();
+                    SceneManager.LoadScene("EndingSceneBad");
+                }
+
+                // Secret
+                else
+                {
+                    PlayerPrefs.SetInt("secretEnding", 1);
+                    PlayerPrefs.Save();
+                    SceneManager.LoadScene("EndingSceneSecret");
+                }
+            }
+        }
+
         // Update the love on the first dialogue
         if(choiceDialogueIndex == 0)
         {

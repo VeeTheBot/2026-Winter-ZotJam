@@ -322,6 +322,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[18].name
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[18].text
       value: She seems nice. Really nice.
       objectReference: {fileID: 0}
@@ -633,6 +637,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -8333091937584048074, guid: 5cc0a2326c4e4024fa46b01a2dddaffb, type: 3}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[18].sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[24].sprite
       value: 
       objectReference: {fileID: -5956010430353252575, guid: 78a6fbef336a7dd4eb4073ac92ac9e36, type: 3}
@@ -673,6 +681,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[1].choices.Array.data[0].love
       value: 1
       objectReference: {fileID: 0}
@@ -694,6 +706,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[15].choices.Array.data[3].love
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[0].love
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[2].love
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[3].love
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
@@ -729,6 +753,22 @@ PrefabInstance:
       value: default
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[0].option
+      value: That's a lovely name!
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[1].option
+      value: Oh, like Australia?
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[2].option
+      value: Oh, you must REALLY like Australia.
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[3].option
+      value: default
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[1].choices.Array.data[0].dialogueList.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -758,6 +798,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[15].choices.Array.data[3].dialogueList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[0].dialogueList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[1].dialogueList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[2].dialogueList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[3].dialogueList.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
@@ -881,6 +937,66 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[0].dialogueList.Array.data[0].name
+      value: Sydney
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[0].dialogueList.Array.data[0].text
+      value: "Aww, thank you! That\u2019s sweet!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[0].dialogueList.Array.data[0].time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[1].dialogueList.Array.data[0].name
+      value: Sydney
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[1].dialogueList.Array.data[0].text
+      value: Uh, yeah, haha! If that helps you remember it better...
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[1].dialogueList.Array.data[0].time
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[2].dialogueList.Array.data[0].name
+      value: Sydney
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[2].dialogueList.Array.data[0].text
+      value: ... Um... Yeah, haha... I mean, I guess that's a first...
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[2].dialogueList.Array.data[0].time
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[3].dialogueList.Array.data[0].name
+      value: Sydney
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[3].dialogueList.Array.data[0].text
+      value: Um...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[3].dialogueList.Array.data[0].time
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[3].dialogueList.Array.data[1].name
+      value: Sydney
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[3].dialogueList.Array.data[1].text
+      value: Uh- I get it, haha! First date nerves getting to you?
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[3].dialogueList.Array.data[1].time
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[1].choices.Array.data[0].dialogueList.Array.data[0].sprite
       value: 
       objectReference: {fileID: 7306476813048190502, guid: 40d25f5680170b84ba86633ad8e453e4, type: 3}
@@ -918,6 +1034,26 @@ PrefabInstance:
       objectReference: {fileID: 1505518640441871464, guid: ba4eb5320ccaf63459c74335989d3216, type: 3}
     - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: dialogueList.Array.data[15].choices.Array.data[3].dialogueList.Array.data[1].sprite
+      value: 
+      objectReference: {fileID: -8333091937584048074, guid: 5cc0a2326c4e4024fa46b01a2dddaffb, type: 3}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[0].dialogueList.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 7306476813048190502, guid: 40d25f5680170b84ba86633ad8e453e4, type: 3}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[1].dialogueList.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: -8333091937584048074, guid: 5cc0a2326c4e4024fa46b01a2dddaffb, type: 3}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[2].dialogueList.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 601444007350062966, guid: c6fa5502d393c474b933bb01ee37f483, type: 3}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[3].dialogueList.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 1505518640441871464, guid: ba4eb5320ccaf63459c74335989d3216, type: 3}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[16].choices.Array.data[3].dialogueList.Array.data[1].sprite
       value: 
       objectReference: {fileID: -8333091937584048074, guid: 5cc0a2326c4e4024fa46b01a2dddaffb, type: 3}
     - target: {fileID: 2574024290365943003, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
@@ -1486,7 +1622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78412c0b0663624458d1520f66c57ff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MonsterFade
-  fadeInIndex: -1
+  fadeInIndex: 22
   fadeOutIndex: -1
   fadeTime: 1
 --- !u!1001 &873006983

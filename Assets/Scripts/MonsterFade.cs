@@ -12,7 +12,9 @@ public class MonsterFade : MonoBehaviour
     // At what dialogue index should the monster fade out? (Assigned in the inspector; -1 means it doesn't fade out)
     [SerializeField] private int fadeOutIndex = -1;
     // How fast the monster should fade in or out (in seconds)
-    [SerializeField] private float fadeTime = 1;
+    [SerializeField] private float fadeTime;
+    // Timer
+    float currentTime;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,6 +27,8 @@ public class MonsterFade : MonoBehaviour
         {
             renderer.color = new Color(renderer.color.r, renderer.color.g, renderer.color.b, 0);
         }
+
+        currentTime = fadeTime;
     }
 
     // Update is called once per frame
@@ -33,7 +37,9 @@ public class MonsterFade : MonoBehaviour
         // If the fade-in index is reached, fade in the monster
         if(dialogueList.GetIndex() == fadeInIndex)
         {
-            renderer.color = new Color(renderer.color.r, renderer.color.g, renderer.color.b, 0);
+            currentTime -= Time.deltaTime;
+
+            renderer.color = new Color(renderer.color.r, renderer.color.g, renderer.color.b, 1 - Mathf.Max(currentTime, 0)/fadeTime);
         }
     }
 }

@@ -425,6 +425,26 @@ PrefabInstance:
       propertyPath: dialogueList.Array.data[18].time
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: -3696367946615728409, guid: a25775697dddae847aef88287d24569d, type: 3}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[1].sprite
+      value: 
+      objectReference: {fileID: 7267973976444443307, guid: 89ce1b00aa470794d8b0eb47f41f5ca4, type: 3}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[2].sprite
+      value: 
+      objectReference: {fileID: 7306476813048190502, guid: 40d25f5680170b84ba86633ad8e453e4, type: 3}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[6].sprite
+      value: 
+      objectReference: {fileID: -3039559592135430102, guid: 187ab596f3a35724681a4757097c9d57, type: 3}
+    - target: {fileID: 202162047024543740, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: dialogueList.Array.data[7].sprite
+      value: 
+      objectReference: {fileID: 7306476813048190502, guid: 40d25f5680170b84ba86633ad8e453e4, type: 3}
     - target: {fileID: 2574024290365943003, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -761,6 +781,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7463552539094771289, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
+      propertyPath: renderer
+      value: 
+      objectReference: {fileID: 1912513513}
     - target: {fileID: 8162664810256667691, guid: d3e9307d48f28584a94b511cc5ad1611, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

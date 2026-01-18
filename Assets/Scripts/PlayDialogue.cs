@@ -26,7 +26,7 @@ public class PlayDialogue : MonoBehaviour
         // The timer element (only shown for choices; hidden otherwise)
         [SerializeField] private Slider timer;
         // The date's sprite
-        // TODO
+        [SerializeField] private SpriteRenderer renderer;
         // Name and Timer parent
         [SerializeField] private GameObject nameAndTimer;
         // Choice buttons parent
@@ -122,6 +122,12 @@ public class PlayDialogue : MonoBehaviour
             // Reset the timer
             ResetTimer(list.GetDialogueList()[index].time);
 
+            // If an image was provided (and the renderer is provided), update the sprite
+            if(list.GetDialogueList()[index].sprite != null && renderer != null)
+            {
+                renderer.sprite = list.GetDialogueList()[index].sprite;
+            }
+
             // If the name is blank (i.e., the narrator), hide the speaker name textbox and the timer
             nameAndTimer.SetActive(!name.text.Equals(""));
 
@@ -175,6 +181,12 @@ public class PlayDialogue : MonoBehaviour
 
         // Reset the timer
         ResetTimer(list.GetDialogueList()[index].choices[choiceIndex].dialogueList[choiceDialogueIndex].time);
+        
+        // If an image was provided (and the renderer is provided), update the sprite
+        if(list.GetDialogueList()[index].choices[choiceIndex].dialogueList[choiceDialogueIndex].sprite != null && renderer != null)
+        {
+            renderer.sprite = list.GetDialogueList()[index].choices[choiceIndex].dialogueList[choiceDialogueIndex].sprite;
+        }
 
         // Hide the timer and the buttons
         timer.gameObject.SetActive(false);

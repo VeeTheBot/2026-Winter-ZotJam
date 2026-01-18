@@ -17,6 +17,9 @@ public class BlinkTimer: MonoBehaviour
     public GameObject MouseHoverManager;
     MouseHover mh;
 
+    public GameObject Heart;
+    Heart heart;
+
     public GameObject topLid;
     public GameObject botLid;
     public GameObject redAura;
@@ -54,6 +57,7 @@ public class BlinkTimer: MonoBehaviour
         monster2.transform.position = banishment;
         monster3.transform.position = banishment;
         //monster4.transform.position = banishment;
+        heart = Heart.GetComponent<Heart>();
         mh = MouseHoverManager.GetComponent<MouseHover>();
         mh.SetMonsterCollider(monsterCurr);
         UpdateMonster();
@@ -132,6 +136,7 @@ public class BlinkTimer: MonoBehaviour
                 monsterCurr.transform.position = new Vector3(rand.Next(3, 7), monsterCurr.transform.position.y, monsterCurr.transform.position.z);
         }
 
+        // TODO: Call game over
         if (monsterState == deathState)
             SceneManager.LoadScene("GameOverScene");
     }
@@ -158,6 +163,7 @@ public class BlinkTimer: MonoBehaviour
     public void UpdateLove(int val)
     {
         love += val;
+        heart.ShowHeart(val);
     }
 
     void LoveIncrement()

@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class PlayDialogue : MonoBehaviour
 {
@@ -43,10 +44,9 @@ public class PlayDialogue : MonoBehaviour
     {
         // Fetch the love update
         loveUpdate = FindAnyObjectByType<BlinkTimer>();
-
         if(loveUpdate == null)
         {
-            Debug.LogError("Love Update not found!");
+            // Debug.LogError("Love Update not found!");
         }
 
         // Fetch the dialogue list
@@ -109,6 +109,12 @@ public class PlayDialogue : MonoBehaviour
         // If the index is out-of-bounds, don't update
         if(index < list.GetDialogueList().Count)
         {
+            // Run the scene inject if properly set up
+            if(list.GetDialogueList()[index].name.ToLower().Equals("scene"))
+            {
+                SceneManager.LoadScene(list.GetDialogueList()[index].text);
+            }
+
             // Update the name and dialogue
             name.text = list.GetDialogueList()[index].name;
             text.text = list.GetDialogueList()[index].text;

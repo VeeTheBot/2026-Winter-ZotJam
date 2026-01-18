@@ -22,3 +22,5 @@ For each line of dialogue...
 * Otherwise (there IS a choice array), update-and-show the buttons
    - If a button IS selected before the timer runs out, run through the sub-array of dialogue
    - If a button is NOT selected before the timer runs out, run through the default sub-array of dialogue (last index)
+
+Add a visible timer for the option selection

@@ -90,6 +90,8 @@ public class BlinkTimer: MonoBehaviour
     public void UpdateLove(int val)
     {
         love += val;
+
+Debug.Log("Love: " + love);
     }
 
     void LoveIncrement()
@@ -99,7 +101,8 @@ public class BlinkTimer: MonoBehaviour
             eyeContactTimer += Time.deltaTime;
             if (eyeContactTimer >= eyeContactEnd)
             {
-                love++;
+                // love++;
+UpdateLove(1);
                 Debug.Log("Love: " + love);
                 eyeContactTimer = 0f;
             }

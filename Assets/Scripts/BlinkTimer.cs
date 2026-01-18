@@ -6,6 +6,7 @@ using System;
 public class BlinkTimer: MonoBehaviour
 {
     public AudioSource earRinging;
+    public AudioSource monsterNoise;
     bool BlinkMechanicsOn = true;
 
     int love = 0;
@@ -227,7 +228,7 @@ public class BlinkTimer: MonoBehaviour
         }
     }
 
-    float ringingEnd = 4f;
+    float ringingEnd = 5f;
     float ringingTimer = 0f;
     void GameOverSequence()
     {
@@ -236,7 +237,7 @@ public class BlinkTimer: MonoBehaviour
 
         Debug.Log(ringingTimer);
 
-        if (ringingTimer >= 0.5f && !earRinging.isPlaying)
+        if (ringingTimer >= 1f && !earRinging.isPlaying)
             earRinging.Play();
         else if (ringingTimer >= ringingEnd)
         {

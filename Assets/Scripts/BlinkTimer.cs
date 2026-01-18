@@ -79,6 +79,16 @@ public class BlinkTimer: MonoBehaviour
             botLid.transform.position = new Vector3(0, -yPosEnd, 0);
             BlinkLogic(false, 2);
         }
+        if (SceneManager.GetActiveScene().name == "IntroScene")
+        {
+            monster1.transform.position = banishment;
+            monster2.transform.position = banishment;
+            monster3.transform.position = banishment;
+            //monster4.transform.position = banishment;
+            topLid.transform.position = new Vector3(0, yPosStart, 0);
+            botLid.transform.position = new Vector3(0, -yPosStart, 0);
+            ToggleBlinkMechanics(false);
+        }
     }
 
     public void ToggleBlinkMechanics(bool toggle)
@@ -185,8 +195,8 @@ public class BlinkTimer: MonoBehaviour
                     eyeContactTimer = 0f;
                     Debug.Log(eyeContactTimer);
                 }
-                else
-                    UpdateLove(-1);
+                //else
+                //    UpdateLove(-1);
                 Debug.Log("Love: " + love);
                 eyeContactTimer = 0f;
             }

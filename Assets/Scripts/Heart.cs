@@ -21,10 +21,16 @@ public class Heart : MonoBehaviour
     {
         if(val > 0)
             heartColor = new Color(1, 1, 1, 0);
-        else
+        else if (val < 0)
             heartColor = new Color(0, 0, 0, 0);
-        heartRenderer.material.color = heartColor;
-        animate = 1;
+
+        if (val != 0)
+        {
+            heartRenderer.material.color = heartColor;
+            animate = 1;
+        }
+        else
+            animate = 0;
     }
 
     // Update is called once per frame

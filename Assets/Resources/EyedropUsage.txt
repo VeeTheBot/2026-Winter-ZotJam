@@ -1,0 +1,14 @@
+label eyedrop1:
+    love -2
+    y "Uh- sorry! Sorry, I just need to use my eyedrops! One second...!" 3
+    resume
+
+label eyedrop2:
+    love -2
+    y "Oh! Uh- my eyes, the darndest thing. Do you mind if I just...?" 3
+    resume
+
+label eyedrop3:
+    love -2
+    y "Ah! Haha, i-it's my eyes again! I swear they get so dry all the time..." 3
+    resume

@@ -1,0 +1,23 @@
+"Date, start!" 5
+d "This is my text." 3
+d "I am going to talk for 5 seconds." 5
+d "Do you want to answer?" 10
+
+menu
+    option "Yes":
+        love +1
+        d "Yaaay!" 3
+    option "No":
+        love -1
+        d "Aw...." 3
+    option "Fuck you":
+        love -5
+        d "Well fuck you too!" 5
+        d "Rude..." 3
+    option default:
+        love -2
+        d "Uh, right..."
+menuEnd
+
+d "Anyways, back to the conversation..." 7
+return

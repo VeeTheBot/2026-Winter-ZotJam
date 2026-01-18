@@ -1,0 +1,24 @@
+Normal dialogue:
+* Speaker's name (can be left blank)
+* Dialogue text
+* Time visible (must not be less than or equal to 0)
+* Speaker's image (if left blank, just don't update the image and use the previous one)
+* Choices array (optional)
+   - Includes player's text, love increment (or decrement), and a list of your date's responses (which, itself, includes name, text, time, and image. Does NOT include another array)
+
+How to program:
+
+There are sets of dialogue (one per question). Each set of dialogue has multiple lines.
+
+For each set of dialogue...
+
+For each line of dialogue...
+* Update the speaker box with the name
+* Update the dialogue box with the text
+* Update the hidden timer with the new time (don't forget to reset it as well)
+* Update the speaker's image (if one was provided)
+* If there is NOT a choice array, hide the buttons
+   - Once the timer runs out, move to the next dialogue
+* Otherwise (there IS a choice array), update-and-show the buttons
+   - If a button IS selected before the timer runs out, run through the sub-array of dialogue
+   - If a button is NOT selected before the timer runs out, run through the default sub-array of dialogue (last index)

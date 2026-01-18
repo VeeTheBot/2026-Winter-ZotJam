@@ -11,7 +11,7 @@ public class BlinkTimer: MonoBehaviour
 
     int love = 0;
     bool lookingAtDate = false;
-    public const float eyeContactEnd = 7;
+    public const float eyeContactEnd = 10f;
     float eyeContactTimer = 0f;
 
     public GameObject MouseHoverManager;
@@ -122,8 +122,15 @@ public class BlinkTimer: MonoBehaviour
             mh.SetMonsterCollider(monsterCurr);
         }
 
-        if(monsterState < 3)
-            monsterCurr.transform.position = new Vector3(rand.Next(-6, 7), monsterCurr.transform.position.y, monsterCurr.transform.position.z);
+        if (monsterState < 3)
+        {
+            float half = rand.Next(0, 2);
+            Debug.Log(half);
+            if(half < 1)
+                monsterCurr.transform.position = new Vector3(rand.Next(-6, -1), monsterCurr.transform.position.y, monsterCurr.transform.position.z);
+            else
+                monsterCurr.transform.position = new Vector3(rand.Next(3, 7), monsterCurr.transform.position.y, monsterCurr.transform.position.z);
+        }
 
         if (monsterState == deathState)
             SceneManager.LoadScene("GameOverScene");
@@ -143,6 +150,11 @@ public class BlinkTimer: MonoBehaviour
         redAura.GetComponent<Renderer>().material.color = redAuraColor;
     }
 
+    public int GetLove()
+    {
+        return love;
+    }
+
     public void UpdateLove(int val)
     {
         love += val;
@@ -153,7 +165,8 @@ public class BlinkTimer: MonoBehaviour
         if(lookingAtDate != mh.hitDate())
         {
             lookingAtDate = mh.hitDate();
-            eyeContactTimer = 0f;
+            if(eyeContactTimer > 0)
+                eyeContactTimer -= Time.deltaTime;
         }
         if (eyeContactTimer < eyeContactEnd)
         {
@@ -161,7 +174,11 @@ public class BlinkTimer: MonoBehaviour
             if (eyeContactTimer >= eyeContactEnd)
             {
                 if (mh.hitDate())
+                {
                     UpdateLove(1);
+                    eyeContactTimer = 0f;
+                    Debug.Log(eyeContactTimer);
+                }
                 else
                     UpdateLove(-1);
                 Debug.Log("Love: " + love);

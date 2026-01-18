@@ -10,7 +10,7 @@ public class MouseHover : MonoBehaviour
     //public void SetDateCollider(GameObject date)
     void Start()
     {
-        dateCollider = GameObject.Find("table placeholder_0").GetComponent<Collider2D>();
+        //dateCollider = GameObject.Find("table placeholder_0").GetComponent<Collider2D>();
     }
 
     Vector3 mouseToWorld()

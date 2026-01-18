@@ -91,7 +91,6 @@ public class BlinkTimer: MonoBehaviour
             topLid.transform.position = new Vector3(0, yPosStart, 0);
             botLid.transform.position = new Vector3(0, -yPosStart, 0);
             ToggleBlinkMechanics(false);
-            BlinkLogic(false);
         }
     }
 
@@ -211,8 +210,8 @@ public class BlinkTimer: MonoBehaviour
                     eyeContactTimer = 0f;
                     Debug.Log(eyeContactTimer);
                 }
-                else
-                    UpdateLove(-1);
+                //else
+                //    UpdateLove(-1);
                 Debug.Log("Love: " + love);
                 eyeContactTimer = 0f;
             }

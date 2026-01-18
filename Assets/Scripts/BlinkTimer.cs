@@ -1,12 +1,17 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Rendering;
 using System;
 
 public class BlinkTimer: MonoBehaviour
 {
+    public AudioSource earRinging;
+    public AudioSource monsterNoise;
+    bool BlinkMechanicsOn = true;
+
     int love = 0;
     bool lookingAtDate = false;
-    public const float eyeContactEnd = 7;
+    public const float eyeContactEnd = 10f;
     float eyeContactTimer = 0f;
 
     public GameObject MouseHoverManager;
@@ -26,6 +31,9 @@ public class BlinkTimer: MonoBehaviour
     Vector3 monster3Pos;
     Vector3 monster4Pos;
 
+    int monsterState = 0; // 0 = not there, 5 = death
+    int deathState = 4;
+
     float yPosEnd; //2.5    // Height of lids mid blink
     float yPosStart = 8.0f; // Height of lids outside of screen
     const int yInt = 10; // blink speed interval
@@ -35,8 +43,6 @@ public class BlinkTimer: MonoBehaviour
     float blinkTimer = 0f;          // Keeps track of timer iterator
 
     Color redAuraColor;   // Color of renderer
-
-    int monsterState = 0; // 0 = not there, 5 = death
 
     void Start()
     {
@@ -58,6 +64,25 @@ public class BlinkTimer: MonoBehaviour
 
         topLid.transform.position = new Vector3(0, yPosStart, 0);
         botLid.transform.position = new Vector3(0, -yPosStart, 0);
+
+        if (SceneManager.GetActiveScene().name == "GameOverScene")
+        {
+            monster1.transform.position = banishment;
+            monster2.transform.position = banishment;
+            monster3.transform.position = banishment;
+            //monster4.transform.position = banishment;
+            topLid.transform.position = new Vector3(0, yPosEnd, 0);
+            botLid.transform.position = new Vector3(0, -yPosEnd, 0);
+            BlinkLogic(false, 2);
+        }
+    }
+
+    public void ToggleBlinkMechanics(bool toggle)
+    {
+        if (toggle)
+            BlinkMechanicsOn = true;
+        else
+            BlinkMechanicsOn = false;
     }
 
     public void ResetMonster()
@@ -97,8 +122,18 @@ public class BlinkTimer: MonoBehaviour
             mh.SetMonsterCollider(monsterCurr);
         }
 
-        if(monsterState < 3)
-            monsterCurr.transform.position = new Vector3(rand.Next(-6, 7), monsterCurr.transform.position.y, monsterCurr.transform.position.z);
+        if (monsterState < 3)
+        {
+            float half = rand.Next(0, 2);
+            Debug.Log(half);
+            if(half < 1)
+                monsterCurr.transform.position = new Vector3(rand.Next(-6, -1), monsterCurr.transform.position.y, monsterCurr.transform.position.z);
+            else
+                monsterCurr.transform.position = new Vector3(rand.Next(3, 7), monsterCurr.transform.position.y, monsterCurr.transform.position.z);
+        }
+
+        if (monsterState == deathState)
+            SceneManager.LoadScene("GameOverScene");
     }
 
     /* Updates redness transparency.
@@ -115,6 +150,11 @@ public class BlinkTimer: MonoBehaviour
         redAura.GetComponent<Renderer>().material.color = redAuraColor;
     }
 
+    public int GetLove()
+    {
+        return love;
+    }
+
     public void UpdateLove(int val)
     {
         love += val;
@@ -125,7 +165,8 @@ public class BlinkTimer: MonoBehaviour
         if(lookingAtDate != mh.hitDate())
         {
             lookingAtDate = mh.hitDate();
-            eyeContactTimer = 0f;
+            if(eyeContactTimer > 0)
+                eyeContactTimer -= Time.deltaTime;
         }
         if (eyeContactTimer < eyeContactEnd)
         {
@@ -133,7 +174,11 @@ public class BlinkTimer: MonoBehaviour
             if (eyeContactTimer >= eyeContactEnd)
             {
                 if (mh.hitDate())
+                {
                     UpdateLove(1);
+                    eyeContactTimer = 0f;
+                    Debug.Log(eyeContactTimer);
+                }
                 else
                     UpdateLove(-1);
                 Debug.Log("Love: " + love);
@@ -164,8 +209,10 @@ public class BlinkTimer: MonoBehaviour
      * If blinkState = 1, close eyes and clear redness once closed
      * If blinkState = 2, open eyes
      */
-    void BlinkLogic(bool usingEyedrops = false)
+    public void BlinkLogic(bool usingEyedrops = false, int startState = -1)
     {
+        if (startState != -1)
+            blinkState = startState;
         if (blinkState == 0)
         {
             blinkState = 1;
@@ -198,10 +245,35 @@ public class BlinkTimer: MonoBehaviour
         }
     }
 
+    float ringingEnd = 5f;
+    float ringingTimer = 0f;
+    void GameOverSequence()
+    {
+        if(ringingTimer < ringingEnd)
+            ringingTimer += Time.deltaTime;
+
+        Debug.Log(ringingTimer);
+
+        if (ringingTimer >= 1f && !earRinging.isPlaying)
+            earRinging.Play();
+        else if (ringingTimer >= ringingEnd)
+        {
+            earRinging.Stop();
+            BlinkMechanicsOn = false;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        Blink();
-        LoveIncrement();
+        if (BlinkMechanicsOn)
+        {
+            Blink();
+            LoveIncrement();
+        }
+        if (SceneManager.GetActiveScene().name == "GameOverScene")
+        {
+            GameOverSequence();
+        }
     }
 }

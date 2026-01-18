@@ -5,6 +5,7 @@ using System;
 public class BlinkTimer: MonoBehaviour
 {
     int love = 0;
+    bool lookingAtDate = false;
     public const float eyeContactEnd = 7;
     float eyeContactTimer = 0f;
 
@@ -15,8 +16,15 @@ public class BlinkTimer: MonoBehaviour
     public GameObject botLid;
     public GameObject redAura;
 
-    public GameObject monster;
+    private GameObject monsterCurr;
+    public GameObject monster1;
+    public GameObject monster2;
+    public GameObject monster3;
+    //public GameObject monster4;
     System.Random rand = new System.Random();
+    Vector3 banishment = new Vector3(-20, 3, 0);
+    Vector3 monster3Pos;
+    Vector3 monster4Pos;
 
     float yPosEnd; //2.5    // Height of lids mid blink
     float yPosStart = 8.0f; // Height of lids outside of screen
@@ -26,22 +34,26 @@ public class BlinkTimer: MonoBehaviour
     public const int blinkEnd = 5; // End timer for blink
     float blinkTimer = 0f;          // Keeps track of timer iterator
 
-    Renderer redRenderer; // Renderer for red aura
     Color redAuraColor;   // Color of renderer
 
     int monsterState = 0; // 0 = not there, 5 = death
-    const float monsterSizeStart = 0.325f;
-    float monsterSize;
 
     void Start()
     {
+        monster3Pos = monster3.transform.position;
+        //monster4Pos = monster4.transform.position;
         monsterState = 0;
-        monsterSize = monster.transform.localScale.x;
+        monsterCurr = monster1;
+        monster1.transform.position = banishment;
+        monster2.transform.position = banishment;
+        monster3.transform.position = banishment;
+        //monster4.transform.position = banishment;
         mh = MouseHoverManager.GetComponent<MouseHover>();
+        mh.SetMonsterCollider(monsterCurr);
+        UpdateMonster();
 
         yPosEnd = topLid.transform.position.y;
-        redRenderer = redAura.GetComponent<Renderer>();
-        redAuraColor = redRenderer.material.color;
+        redAuraColor = redAura.GetComponent<Renderer>().material.color;
         UpdateRedness(0f);
 
         topLid.transform.position = new Vector3(0, yPosStart, 0);
@@ -61,16 +73,32 @@ public class BlinkTimer: MonoBehaviour
         if (!mh.hitMonster())
         {
             monsterState++;
-            if (monsterState == 0)
-                monsterSize = monsterSizeStart;
-            else
-                monsterSize += 0.1f;
+            monsterCurr.transform.position = banishment;
+            if (monsterState == 1)
+            {
+                monsterCurr = monster1;
+                monsterCurr.transform.position = new Vector3(0, 2, 0);
+            }
+            else if (monsterState == 2)
+            {
+                monsterCurr = monster2;
+                monsterCurr.transform.position = new Vector3(0, 0, 0);
+            }
+            else if (monsterState == 3)
+            {
+                monsterCurr = monster3;
+                monsterCurr.transform.position = monster3Pos;
+            }
+            /*else if (monsterState == 4)
+            {
+                monsterCurr = monster4;
+                monsterCurr.transform.position = monster4Pos;
+            }*/
+            mh.SetMonsterCollider(monsterCurr);
         }
 
-        monster.transform.position = new Vector3(rand.Next(-9, 9), monster.transform.position.y, monster.transform.position.z);
-        // TODO: change sprites
-        monster.transform.localScale = new Vector3(monsterSize, monsterSize, monsterSize);
-        // TODO: add condition for 5th state
+        if(monsterState < 3)
+            monsterCurr.transform.position = new Vector3(rand.Next(-6, 7), monsterCurr.transform.position.y, monsterCurr.transform.position.z);
     }
 
     /* Updates redness transparency.
@@ -84,7 +112,7 @@ public class BlinkTimer: MonoBehaviour
             redAuraColor.a = a;
         else if (redAuraColor.a + a <= 1f)
             redAuraColor.a += a;
-        redRenderer.material.color = redAuraColor;
+        redAura.GetComponent<Renderer>().material.color = redAuraColor;
     }
 
     public void UpdateLove(int val)
@@ -94,19 +122,23 @@ public class BlinkTimer: MonoBehaviour
 
     void LoveIncrement()
     {
-        if (eyeContactTimer < eyeContactEnd && mh.hitDate())
+        if(lookingAtDate != mh.hitDate())
+        {
+            lookingAtDate = mh.hitDate();
+            eyeContactTimer = 0f;
+        }
+        if (eyeContactTimer < eyeContactEnd)
         {
             eyeContactTimer += Time.deltaTime;
             if (eyeContactTimer >= eyeContactEnd)
             {
-                love++;
+                if (mh.hitDate())
+                    love++;
+                else
+                    love--;
                 Debug.Log("Love: " + love);
                 eyeContactTimer = 0f;
             }
-        }
-        else
-        {
-            eyeContactTimer = 0f;
         }
     }
 

@@ -226,7 +226,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160420698e7ad4643b941e66eec73d44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BlinkAnimations
+  MouseHoverManager: {fileID: 775039657339385524, guid: f06934857ac1eb2439b4e9a6306299d2, type: 3}
   topLid: {fileID: 4832724050055065328}
   botLid: {fileID: 610002992260008219}
-  redAura: {fileID: 0}
-  monster: {fileID: 0}
+  redAura: {fileID: 4888372944242466431, guid: 3982c91a6171aa74bb84dac8f6c86f00, type: 3}
+  monster1: {fileID: 6010246207088948056, guid: 3458ec9114857634f91194459e7fed0f, type: 3}
+  monster2: {fileID: 276159028340569905, guid: 75c8c3a614589ee43973d088c19be778, type: 3}
+  monster3: {fileID: 2132955178587039377, guid: 7315a4313dd36ec47889d9228d4648ea, type: 3}

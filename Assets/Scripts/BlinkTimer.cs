@@ -291,6 +291,7 @@ public class BlinkTimer: MonoBehaviour
         {
             earRinging.Stop();
             BlinkMechanicsOn = false;
+            Application.Quit();
         }
     }
 
